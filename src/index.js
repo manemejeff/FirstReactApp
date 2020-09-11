@@ -5,16 +5,29 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const Header = () => {
-    return <h2>Hello World!!!</h2>
+    const scr = "Hello World!"
+    return <h2>{scr}</h2>
 }
 
 const Field = () => {
-    return <input type="text" placeholder="Type here"></input>
+    const holder = "Type here"
+    const styledField = {
+        width: '300px'
+    }
+
+    return <input type="text"
+        style={styledField} 
+        placeholder={holder}
+        autoComplete=""
+        className="first"
+        htmlFor=""></input>
 }
 
 const Btn = () => {
     const text = "Log in";
-return <button>{text}</button>
+    const logged = true;
+
+    return <button>{text}</button>
 }
 
 const App_2 = () => {
