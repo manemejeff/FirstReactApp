@@ -4,7 +4,9 @@ import PostListItem from '../post-list-item';
 import './post-list.css'
 
 const PostList = ({posts, onDelete, onToggleImportant, onToggleLiked}) => {
-
+    if (posts === undefined) {
+        posts = []
+    }
     const elements = posts.map((item) => {
         const {id, ...itemProps} = item;
         return (
